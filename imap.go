@@ -43,6 +43,7 @@ func getReportsViaIMAP4(server, user, password string, since, before time.Time) 
 	if len(searchData.All) == 0 {
 		return nil, nil
 	}
+	// FIXME implement multipart message fetching
 	fetchOptions := &imap.FetchOptions{
 		Flags:    true,
 		Envelope: true,
