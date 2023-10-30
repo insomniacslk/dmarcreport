@@ -24,8 +24,8 @@ var (
 	flagImapServer   = pflag.StringP("imap-server", "s", "", "IMAP4 server:port")
 	flagImapUser     = pflag.StringP("imap-user", "u", "", "IMAP4 user name")
 	flagImapPassword = pflag.StringP("imap-password", "p", "", "IMAP4 password")
-	flagImapSince    = pflag.StringP("imap-since", "S", programStartDate.AddDate(0, 0, -1).Format(dateFormat), "Starting date for email report fetching")
-	flagImapBefore   = pflag.StringP("imap-before", "B", programStartDate.AddDate(0, 0, 0).Format(dateFormat), "Ending date for email report fetching")
+	flagImapSince    = pflag.StringP("imap-since", "S", programStartDate.AddDate(0, 0, 0).Format(dateFormat), "Starting date for email report fetching")
+	flagImapBefore   = pflag.StringP("imap-before", "B", programStartDate.AddDate(0, 0, 1).Format(dateFormat), "Ending date for email report fetching")
 	flagFilename     = pflag.StringP("filename", "f", "", "File name. If specified, IMAP4 is not used")
 )
 
