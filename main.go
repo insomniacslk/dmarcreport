@@ -40,7 +40,7 @@ func printAggregate(agg *report.Aggregate) {
 	fmt.Println()
 	fmt.Printf("Found %d record(s) in report\n", len(agg.Records))
 	for idx, r := range agg.Records {
-		fmt.Printf("% 3d) src=%s\n     from=%s\n     count=%d\n     success=%v\n     dkim_auth_result=%+v\n     spf_auth_result=%+v\n", idx+1, r.Row.SourceIP, r.Identifiers.HeaderFrom, r.Row.Count, r.FinalDispositionSuccess(), r.DKIMAligned(), r.SPFAligned())
+		fmt.Printf("% 3d) src=%s\n     from=%s\n     count=%d\n     success=%v\n     dkim_aligned=%+v\n     spf_aligned=%+v\n", idx+1, r.Row.SourceIP, r.Identifiers.HeaderFrom, r.Row.Count, r.FinalDispositionSuccess(), r.DKIMAligned(), r.SPFAligned())
 	}
 }
 
