@@ -1,6 +1,6 @@
 module github.com/insomniacslk/dmarcreport
 
-go 1.21.1
+go 1.21
 
 require (
 	github.com/emersion/go-imap/v2 v2.0.0-alpha.7
