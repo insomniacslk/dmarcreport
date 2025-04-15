@@ -70,6 +70,10 @@ func main() {
 		if err != nil {
 			log.Fatalf("Failed to get reports via IMAP4: %v", err)
 		}
+		if len(reports) == 0 {
+			log.Printf("No reports found in the requested time range")
+			return
+		}
 		for _, report := range reports {
 			agg, err := parseReport(report)
 			if err != nil {
